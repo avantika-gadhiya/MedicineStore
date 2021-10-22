@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="bluesharklabs.com.medicinestore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".utills.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.ViewPhotoIdActivity"/>
+        <activity android:name=".activities.ViewAllProductsOrderActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBNaw-vL6x2-VDXDMEdiuvl2ZWxESHBq0U" />
+
+        <activity
+            android:name=".activities.UpdateStorePhotoActivity"
+            android:label="@string/title_activity_update_store_photo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ImgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SubscriptionHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MySubscriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.TermsConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SeekFinanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SendFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AvailableStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditPaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DrugLicenseNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GstNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditBusinessTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditStoreDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditEmployeesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.StoreProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomViewOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomMakeOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ViewAllProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CustomOrderDetailActivityFromReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.UploadStorePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register" />
+        <activity
+            android:name=".loginactivities.UploadDrugLicenseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register" />
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.MyRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.UploadInvoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SetDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MakeOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OffersMadeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ViewOfferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OrderDetailActivityFromReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PendingOrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.ThankYouActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.PreferredPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.SelectMerchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.StoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.PersonalInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".loginactivities.UploadGstCertiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Register" />
+        <activity
+            android:name=".loginactivities.Verify1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginactivities.VerifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".loginactivities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+
+        <service
+            android:name=".utills.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

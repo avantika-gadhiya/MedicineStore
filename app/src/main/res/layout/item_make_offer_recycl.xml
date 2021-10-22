@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_18"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="Omeprazole"
+        android:textColor="@color/black_txt"
+        app:layout_constraintEnd_toStartOf="@+id/const_middle"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/circularstd_book"
+        android:text="Bodyshop"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toBottomOf="@+id/txt_product_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_qntty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/circularstd_book"
+        android:text="250 ml Bottle"
+        android:textColor="@color/colorGreyText"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+        app:layout_constraintTop_toBottomOf="@+id/txt_brand_name" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_product_name"
+        app:layout_constraintTop_toTopOf="@+id/txt_product_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_qntt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/circularstd_book"
+                android:text="@string/qty"
+                android:textAllCaps="true"
+                android:visibility="invisible"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edt_qntt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularstd_book"
+                android:text=" : 01"
+                android:visibility="invisible"
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_qntt"
+                app:layout_constraintStart_toEndOf="@+id/txt_qntt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_avail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/circularstd_book"
+            android:gravity="center"
+            android:text="@string/availability"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_14"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/const_qty"
+            app:layout_constraintTop_toBottomOf="@+id/const_qty" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_presc_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/circularstd_book"
+            android:text="@string/presc_only"
+            android:textColor="@color/review_red_btn"
+            android:textSize="@dimen/sp_14"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/txt_avail"
+            app:layout_constraintTop_toBottomOf="@+id/txt_avail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/rs_"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView72"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="650.00"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_rej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_acc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reject" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/accept" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/img_clr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_color_code"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_product_name"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3fa9b5</color>
+    <color name="colorPrimaryDark">#3fa9b5</color>
+    <color name="colorAccent">#3fa9b5</color>
+
+    <color name="transperent_backgroud">#00FFFFFF</color>
+
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="black_txt">#272727</color>
+    <color name="grey_txt">#8697b7</color>
+    <color name="bg_color">#eef0f5</color>
+    <color name="bg_color_light">#99EEF0F5</color>
+    <color name="reg_txt">#389bf1</color>
+    <color name="colorGreyText">#838e9c</color>
+
+    <color name="colorLightGray">#DADADA</color>
+    <color name="colorlightGrey">#0F000000</color>
+    <color name="red_txt">#E44949</color>
+
+    <color name="green_color">#3fa9b5</color>
+    <color name="light_green_color">#77d0ce</color>
+    <color name="yellow_color">#ffc267</color>
+    <color name="green_txt">#4db49d</color>
+    <color name="blue_btn">#78b8ee</color>
+    <color name="grey_btn">#8da6af</color>
+    <color name="red_btn">#f89a9a</color>
+    <color name="active_btn">#99ccb9</color>
+    <color name="review_red_btn">#f14166</color>
+    <color name="review_purple_btn">#673ab7</color>
+    <color name="light_green">#9dcc9f</color>
+    <color name="offer_lost">#DCFF5767</color>
+
+    <color name="offer_lost_">#DAFF5767</color>
+    <color name="colorofWhite">#117E7777</color>
+
+    <!--status color-->
+    <color name="st_active">#77d0ce</color>
+    <color name="st_timed_out">#8da6af</color>
+    <color name="st_hrs">#f89a9a</color>
+    <color name="st_pending">#ffc267</color>
+    <color name="st_offer_made">#78b8ee</color>
+    <color name="st_accepted">#a9cc7a</color>
+    <color name="st_invoiced">#8fb5db</color>
+    <color name="st_delivered">#9dcc9f</color>
+    <color name="txt">#a9cc7a</color>
+
+</resources>
