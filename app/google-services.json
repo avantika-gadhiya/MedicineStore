@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "288784774996",
+    "project_id": "pharmlane-d54bc",
+    "storage_bucket": "pharmlane-d54bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288784774996:android:40249b417148920b583ac1",
+        "android_client_info": {
+          "package_name": "pharmlane.com.PharmLane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288784774996-1prm7qsesc4abdn0d6seknl7mo97fe8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBjzabHS2r_0eFiTOQsxnTRhm_LnNBhlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288784774996-1prm7qsesc4abdn0d6seknl7mo97fe8a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288784774996:android:216b7667d073c47e583ac1",
+        "android_client_info": {
+          "package_name": "pharmlane.com.PharmLaneStore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288784774996-1prm7qsesc4abdn0d6seknl7mo97fe8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBjzabHS2r_0eFiTOQsxnTRhm_LnNBhlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288784774996-1prm7qsesc4abdn0d6seknl7mo97fe8a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="12 Dec, 2019"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        android:fontFamily="@font/circularstd_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_plans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="6 Months"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_15"
+        android:fontFamily="@font/circularstd_medium"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="Rs.XXXX.XX"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_18"
+        android:fontFamily="@font/circularstd_medium"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_date"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="12 Jun, 2020"
+        android:textColor="@color/red_txt"
+        android:textSize="@dimen/sp_14"
+        android:fontFamily="@font/circularstd_bookitalic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_plans"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/bg_color"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_plans" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView144"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expires_on"
+        android:textColor="@color/red_txt"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:textSize="@dimen/sp_14"
+        android:fontFamily="@font/circularstd_bookitalic"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_expiry"
+        app:layout_constraintEnd_toStartOf="@+id/txt_expiry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

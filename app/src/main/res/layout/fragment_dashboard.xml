@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/simpleSwipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nested_location_price"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_direct_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/direct_orders"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_direct_ordr_viewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/viewall"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_direct_orders"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycl_directorders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_direct_orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pending_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/pending_orders"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/recycl_directorders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pending_ordr_viewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/viewall"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_pending_orders"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycl_pendingorders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pending_orders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_offers_made"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/offers_made"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/grey_txt"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/recycl_pendingorders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_ofers_made_viewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/viewall"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txt_offers_made"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycl_offersmade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_offers_made" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain_nothing_here"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/txt_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dashboard_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:fontFamily="@font/circularstd_medium"
+                android:text="@string/you_dont_have_any_request"
+                android:textColor="@color/black_txt"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18"
+                android:justificationMode="inter_word"
+                android:fontFamily="@font/circularstd_book"
+                android:text="Welcome PharmLane Store! \n\nClick on Menu bar(top-left corner) to Complete your Store Profile. \n\nYour Order Dashboard will show here once you receive your first order."
+                android:textColor="@color/grey_txt"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_en"
+                app:layout_constraintStart_toStartOf="@+id/guideline_st"
+                app:layout_constraintTop_toBottomOf="@+id/txt_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_launch_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/dashboard_card"
+                android:drawableStart="@drawable/lauanch_demo"
+                android:drawablePadding="@dimen/dp_8"
+                android:fontFamily="@font/circularstd_book"
+                android:gravity="center"
+                android:text="@string/launch_demo"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_2"
+                app:layout_constraintVertical_bias="0.0" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.19" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.81" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

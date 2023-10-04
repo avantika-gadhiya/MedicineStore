@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_14"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_14"
+            android:fontFamily="@font/circularstd_book"
+            android:text="Code: 12345"
+            app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_avail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_book"
+        android:gravity="center"
+        android:text="Available"
+        android:textColor="@color/green_txt"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:text="@string/mrp"
+            android:textColor="@color/grey_txt"
+            android:textSize="@dimen/sp_14"
+            android:fontFamily="@font/circularstd_book"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_avail"
+            app:layout_constraintEnd_toStartOf="@+id/txt_mrp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_mrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_14"
+            android:fontFamily="@font/circularstd_book"
+            android:text=""
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_qnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/circularstd_book"
+            android:text="Qty: 10"
+            android:textColor="@color/grey_txt"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_clr_code"
+            app:layout_constraintTop_toBottomOf="@+id/txt_code"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/img_clr_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_color_code"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_code" />
+</androidx.constraintlayout.widget.ConstraintLayout>

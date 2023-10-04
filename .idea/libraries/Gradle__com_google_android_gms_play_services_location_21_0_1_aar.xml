@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-location:21.0.1@aar">
+    <CLASSES>
+      <root url="jar://C:/Program Files/Android/Android Studio/plugins/gradle/lib/caches/transforms-3/32b4cb59b7962b8858594b2950fb3fcd/transformed/jetified-play-services-location-21.0.1/jars/classes.jar!/" />
+      <root url="file://C:/Program Files/Android/Android Studio/plugins/gradle/lib/caches/transforms-3/32b4cb59b7962b8858594b2950fb3fcd/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://C:/Program Files/Android/Android Studio/plugins/gradle/lib/caches/modules-2/files-2.1/com.google.android.gms/play-services-location/21.0.1/428b246a58c2045e2fe6c23478dc88595a110e52/play-services-location-21.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

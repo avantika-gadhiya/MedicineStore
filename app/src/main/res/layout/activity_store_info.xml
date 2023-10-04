@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    tools:context="pharmlane.com.PharmLaneStore.loginactivities.StoreInfoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_20" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_bold"
+        android:text="@string/store_info"
+        android:textAllCaps="true"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_book"
+        android:text="2/6"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_location_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/txt_count">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_store_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/store_name"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <!--  <RadioButton
+                      android:id="@+id/radio_retailer"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:fontFamily="@font/circularstd_book"
+                      android:text="@string/retailer"
+                      android:textColor="@drawable/radio_text_selected"
+                      android:textSize="@dimen/sp_16" />
+
+                  <RadioButton
+                      android:id="@+id/radio_wholeseller"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/dp_16"
+                      android:fontFamily="@font/circularstd_book"
+                      android:text="@string/wholeseller"
+                      android:textColor="@drawable/radio_text_selected"
+                      android:textSize="@dimen/sp_16" />-->
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radiogroup">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_gst_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/gst_no"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/radiogroup">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_drug_licnc_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/drug_licnc_no"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView_pharmacist_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_pharmacist_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/registered_pharmacist_name"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view_pharmacist_name"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_pharmacist_name" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_pharmacist_name">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_merch_categry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/category_listing"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/merch_categry"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_8"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_est_since"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/est_since"
+                    android:inputType="number"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_office_shop_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/office_shop_no"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/textView7"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_street_road"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/street_road"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/area"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view6"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/landmark"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/view12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/view7">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_building"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/building_name"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view8"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@+id/textView7"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/city"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toStartOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/view8">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_zip_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/zip_code"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingTop="@dimen/dp_5"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view9"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view10">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/edt_geo_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/geo_location_picker"
+                    android:fontFamily="@font/circularstd_book"
+                    android:hint="@string/geo_location"
+                    android:inputType="textCapWords"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_8"
+                    android:textColorHint="@color/grey_txt"
+                    android:textSize="@dimen/sp_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@color/bg_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/circularstd_bold"
+        android:text="@string/next"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

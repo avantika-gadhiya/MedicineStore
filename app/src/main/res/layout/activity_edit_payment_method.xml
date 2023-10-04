@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="pharmlane.com.PharmLaneStore.activities.EditPaymentMethodActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circularstd_bold"
+            android:gravity="center"
+            android:text="@string/edit_paymnt_method"
+            android:textAllCaps="true"
+            android:textColor="@color/black_txt"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_toolbar" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_16" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:checked="true"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/view_" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/cod"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/checkBox" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/circularstd_book"
+        android:text="@string/txt_for_cod"
+        android:textColor="@color/grey_txt"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/txt_paymnt_option"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyl_paymnt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+   <!-- <CheckBox
+        android:id="@+id/chkbx_gpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/google_pay"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chkbx_gpay"
+        app:layout_constraintStart_toEndOf="@+id/chkbx_gpay" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/chkbx_gpay">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_google_upi_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:fontFamily="@font/circularstd_medium"
+            android:hint="@string/upi_id"
+            android:paddingTop="@dimen/dp_5"
+            android:textColor="@color/black_txt"
+            android:textColorHint="@color/grey_txt"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/grey_txt"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <CheckBox
+        android:id="@+id/chkbx_paytm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/paytm"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chkbx_paytm"
+        app:layout_constraintStart_toEndOf="@+id/chkbx_paytm" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/chkbx_paytm">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_paytm_upi_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:fontFamily="@font/circularstd_medium"
+            android:hint="@string/upi_id"
+            android:paddingTop="@dimen/dp_5"
+            android:textColorHint="@color/grey_txt"
+            android:textSize="@dimen/sp_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/grey_txt"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <CheckBox
+        android:id="@+id/chkbx_phonepe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_28"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/phone_pe"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chkbx_phonepe"
+        app:layout_constraintStart_toEndOf="@+id/chkbx_phonepe" />
+
+    <CheckBox
+        android:id="@+id/chkbx_oncredt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/chkbx_phonepe"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_on_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:fontFamily="@font/circularstd_medium"
+        android:text="@string/on_credit"
+        android:textColor="@color/black_txt"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chkbx_oncredt"
+        app:layout_constraintStart_toEndOf="@+id/chkbx_oncredt" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/circularstd_bold"
+        android:text="@string/save"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
